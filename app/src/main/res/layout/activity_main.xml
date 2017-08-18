@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cl.inacap.miaplicacionoriginal.MainActivity">
+
+    <TextView
+        android:text="@string/texto_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNombre"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etNombre"
+        android:layout_below="@+id/tvNombre"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/boton_saludar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSaludar"
+        android:layout_below="@+id/etNombre"
+        android:layout_alignParentStart="true" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSaludar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp"
+        android:id="@+id/tBtnTest" />
+
+    <CheckBox
+        android:text="Cajita check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tBtnTest"
+        android:layout_toStartOf="@+id/tvToggleButton"
+        android:id="@+id/cbTest"
+        android:onClick="onCheckboxClicked" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:id="@+id/tvToggleButton"
+        android:layout_alignBaseline="@+id/tBtnTest"
+        android:layout_alignBottom="@+id/tBtnTest"
+        android:layout_toEndOf="@+id/tvNombre" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCheckBox"
+        android:layout_alignBottom="@+id/cbTest"
+        android:layout_alignStart="@+id/tvToggleButton" />
+
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/cbTest"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/radioGroup">
+
+
+    <RadioButton
+        android:text="Opción 1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbTest1"
+        android:onClick="onRadioClicked"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:text="Opción 2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbTest2"
+        android:onClick="onRadioClicked"
+        android:layout_below="@+id/rbTest1"
+        android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvCheckBox"
+            android:id="@+id/tvRadio" />
+    </RadioGroup>
+
+    <Switch
+        android:text="Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/swTest"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="39dp"
+        android:onClick="onSwitchClicked"
+        />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSwitch"
+        android:layout_alignTop="@+id/swTest"
+        android:layout_toEndOf="@+id/cbTest" />
+</RelativeLayout>
